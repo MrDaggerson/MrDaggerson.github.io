@@ -1,0 +1,112 @@
+.blogheader {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+
+.leftheader {
+    margin: 1rem;
+}
+
+.rightheader {
+    margin: 5rem 0;
+}
+
+.rightheader h1 {
+    margin: 0;
+}
+
+.rightheader p {
+    margin: 0;
+}
+
+.blogarticle nav ul {
+    list-style-type: none;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border-top: 2px solid #DA0090;
+    border-bottom: 2px solid #A51F10;
+}
+
+.blogarticle nav li {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.blogarticle section article {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.thetext {
+    margin: 1rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Kavivanar', cursive;
+    font-weight: normal;
+}
+h3 {
+    font-size: 2rem;
+    color: #A51F10;
+    margin: 2rem 0 0 0;
+}
+
+h2 {
+    color: #DA0090;
+}
+
+.blogarticle a {
+    color: #DA0090;
+    text-decoration: none;
+}
+
+.blogarticle a:hover {
+    text-decoration: underline;
+}
+
+.posted {
+    font-size: 0.8rem;
+    color: #89A611;
+}
+
+section {
+    border-bottom: 2px solid #DA0090;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer p {
+    border-top: 2px solid #A51F10;
+    margin: 0.5rem 0;
+    padding-top: 1rem;
+}
+
+/* makes the corners of the item (img in this case) round) I have also inserted respective clas in the html img code */
+.borderradius {
+    border-radius: 1rem;
+    margin: 2rem 1rem 2rem 0;
+}

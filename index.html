@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Daggerson</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1><a class="underline" href="index.html"> &Hfr; </a></h1>
+        
+        <ul class="list1">
+            <li><a href="newpage.html"> new page </a> </li>
+            <li><a href="csslearning.html"> css learning </a></li>
+            <li><a href="newtags.html"> new tags </a></li>
+            <li><a href="verticalnavigation.html"> vertical navigation </a></li>
+            <li><a href="floats.html"> floats </a></li>
+            <li><a href="flexbox.html"> flexbox </a></li>
+            <li><a href="forms.html"> forms </a></li>
+            <li><a href="blog.html"> alien blog </a></li>
+            <li><a href="calculator.html"> calculator </a></li>
+        </ul>
+
+        <style>
+            .underline {
+                border-bottom: 2px solid #CEDEF2;
+            }
+        </style>
+    </header>
+
+    <article>    
+    <!-- smoller header -->
+    <h2>Unordered list</h2>
+
+    <!-- list with bullets -->
+    <ul>
+        <li>playing</li>
+        <li>running</li>
+        <li>workout</li>
+    </ul>
+
+    <h2>Ordered list</h2>
+
+    <!-- list with numbers -->
+    <ol>
+        <li class="js-target">water</li>
+        <li>salt</li>
+        <li>garlic</li>
+        <li>meat</li>
+        <li>onion</li>
+        <li class="js-target">tyemali</li>
+    </ol>
+
+    <!-- changing HTML text with js -->
+    <script>
+        const textChanger = document.querySelectorAll ('.js-target');
+        for (let i = 0; i < textChanger.length; i++) {
+            const currentElement = textChanger[i];
+            currentElement.innerText = "js changed";
+            // changing CSS with js
+            currentElement.style.backgroundColor = '#D9B2A9';  
+        }
+    </script>
+
+    <h2>Useful links</h2>
+
+    <!-- link to a new page that you created (other html file in folder) opens in a new page -->
+    <p><a href= "https://fonts.google.com/" target= "_blank" > Fonts google </a></p>
+    <p><a href="https://developer.mozilla.org/en-US/" target="_blank" > Developer resources </a> </p>
+    <p><a href="https://www.toptal.com/designers/htmlarrows/" target="_blank"> Symbols/arrows/math </a></p>
+    <p><a href="https://color.adobe.com/explore" target="_blank"> Color pallets </a></p>
+
+    <h2>some js into HTML and CSS</h2>
+
+    <!-- HTMR creates a button,  js below adds an event listener (resulting action) after an event (in this case - click) is riggered -->
+    <button class="event-button">Click me!</button>
+    <script>
+        const button = document.querySelector('.event-button');
+        button.addEventListener('click', function () {
+        alert("Hey there!");
+        });
+    </script>
+
+    <!-- my own way to devide button and input -->
+    <p></p>
+
+    <!-- HTML creates an input box, js adds an event listener that inputs text in the below paragraph <p></p> -->
+    <input placeholder="type the text" class="input-to-copy" />
+    <p class="p-to-copy-to">Nothing has happened yet.</p>
+    <script>
+    const inputs = document.querySelector('.input-to-copy');
+    const paragraphs = document.querySelector('.p-to-copy-to');
+    inputs.addEventListener("keyup", function() {
+        paragraphs.innerText  = inputs.value;
+    });
+    </script>
+
+    <!-- HTMl creates a box and for input, CSS creates a green box with its parameters, js lets the user change the color of the box by typing into input -->
+    <!-- HTML creating a box -->
+    <div class="color-box"></div>
+    <!-- CSS part styling the box -->
+    <style>
+        .color-box {
+          background-color: #2A708C;
+          width: 100px;
+          height: 100px;
+        }
+    </style>
+    <!-- HTML part creating input-->
+    <p></p>
+    <input class="color-input" placeholder="Type the color" />
+    <!-- js part creating function -->
+    <script>
+    const input = document.querySelector('.color-input');
+    const paragraphi = document.querySelector('.color-box');
+    input.addEventListener("keyup", function(e) {
+        if (e.key === 'Enter') {
+            paragraphi.style.backgroundColor  = input.value;
+        }
+    });
+    </script>
+    </article>
+</body>
+</html>

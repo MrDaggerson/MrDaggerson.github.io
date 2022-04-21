@@ -1,0 +1,47 @@
+/* every paragraph has its own box by defalut */
+/* padding is space inside and marigin is space outside */
+/* creates a box arount something */
+div {
+    border: 5px blue solid;
+    /* space between boxes */
+    margin-top: 1rem;
+    /* space between box and content inside */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* styles a specific box defined in html */
+.box1 {
+    background-color: pink;
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box2 {
+    background-color: aqua;
+}
+
+/* styles a paragraph */
+p {
+    border: 2px solid black;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0.5rem;
+}
+
+/* styles a paragraph within a box */
+.box1 p {
+    font-size: 1.5rem;
+} 
+
+.box1 h2 {
+    margin-bottom: -1rem;
+    text-align: center;
+}
+
+.box3 {
+    background-image: url(https://th.bing.com/th/id/R.6fa7add82a47d9244d2d30faf38810ab?rik=Xm43A79%2ffag4Dw&pid=ImgRaw&r=0);
+}

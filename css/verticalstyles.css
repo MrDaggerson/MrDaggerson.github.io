@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+/* targets the ul list in nav family*/
+nav ul {
+    /* defines the style of the list - in this case, removes bullets */
+    list-style-type: none;
+
+    /* ul has padding and we removed it here */
+    padding: 0;
+
+    /* it may also have margin so just in case */
+    margin: 0;
+}
+
+/* styles the links inside lists - in this case could be also done with nav a, ul a, li a */
+nav ul li a {
+    text-decoration: none;
+    border: 3px solid black;
+    /* moves the clickable area to the whole box */
+    display: block;
+    padding: 0.5rem;
+}
+
+/* creates a space between list items */
+.innerlist li {
+    background-color: aqua;
+    border: 3px solid brown;
+    width: 15%;
+    margin-bottom: 1rem;
+    /* centers cext in the box */
+    text-align: center;
+    /* moves the list in a horisontal position */
+    display: inline-block;
+}
+
+nav a:hover {
+    color: brown;
+    background-color: white;
+}

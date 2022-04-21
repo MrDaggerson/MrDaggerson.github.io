@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<!-- copied lint to a specific fonts.google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="index.html"> &Hfr; </a></h1>
+        
+        <ul class="list1">
+            <li><a href="newpage.html"> new page </a> </li>
+            <li><a href="csslearning.html"> css learning </a></li>
+            <li><a href="newtags.html"> new tags </a></li>
+            <li><a href="verticalnavigation.html"> vertical navigation </a></li>
+            <li><a href="floats.html"> floats </a></li>
+            <li><a href="flexbox.html"> flexbox </a></li>
+            <li><a href="forms.html" class="underline"> forms </a></li>
+            <li><a href="blog.html"> alien blog </a></li>
+            <li><a href="calculator.html"> calculator </a></li>
+        </ul>
+
+        <style>
+            .underline {
+                border-bottom: 2px solid #CEDEF2;
+            }
+        </style>
+    </header>
+
+	<article>
+	<div class="wrapper">
+		<section>
+			<h2 class="realheader">Alien Abduction Order Form</h2>
+			<p class="description">Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+			<!--- tag "action" makes the form work - after submit the server gets the submitted info. at this point we just get help from backend programmer and we do not actually build js code that does submitting  -->
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES
+			" method="post">
+			<!-- in this case it does not work, since the js is configured so that e-mail matches bootcamp registration e-mail, which i do not have -->
+			<input type="hidden" id="myhidden" name="send_to" value="xanjala23@gmail.com">
+
+				<fieldset>
+					<!-- describes the content of the fieldset -->
+					<legend>Your contact information</legend>
+					<!-- in "for="name" you put the name of the id below -->
+					<label for="name"> Your name </label>	<input type="text" id="name" 			name="name" placeholder="type your name"/>
+					<label for="phone">Phone number</label>
+						<!-- type "tel" adapts the input box for mobiles -->
+						<input type="tel" id="phone" name="phone" 	placeholder="type your phone number"/>
+					<label for="email"> Email </label>
+						<input type="email" id="email" name="email" placeholder="type your email"/>
+				</fieldset>
+				<fieldset>
+					<legend>About your abduction </legend>
+					<label for="date">Requested  date</label>
+					<input type="date" id="date" name="date"/>
+					<label for="number">How many people would you like abducted?</label>
+					<!-- tag "min" ensures that the input is at least 1 and tag "max" sets maximum -->
+					<input type="number" id="number" name="number" min="1" max="10"/>
+					<p>What type of UFO do you prefer?</p>
+					
+					<!-- "labe" creates a separarate box that makes entire text clickable -->
+					<label>
+						<!-- tag "radio" creates choosable bulllet list. name tag value (in this case - ufotype - should always be the same -->
+						<input type="radio" name="ufotype" value="classic" checked> Classic oval UFO
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="starwars"> Star Wars-style Imperial cruiser
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="startreck"> Battlestar Galactica-style Viper
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="borg"> Borg-style cube
+					</label>
+						
+					<!-- below we are creating a dropdown seceltion. unlike in radio buttons, here we use label in the question paragraph -->
+					<label for="abductiontype">What type of abduction experience do you want?</label>
+						<select id="abductiontype" name="abductiontype">
+							<option selected>select one...</option>
+							<option value="tour">Tour of the solar system</option>
+							<option value="dinner">Alien dinner and discussion</option>
+							<option value="dance">Alien dance lessons</option>
+							<option value="whales">Whale watching</option>
+						</select>
+
+					<!-- creates a bigger box to input text -->
+					<label for="comments">Special requests:</label>
+					<textarea id="comments" name="comments" placeholder="tell us about your needs..."></textarea>
+					
+					<!-- creates a checkbox for yes/no questions like do you agree with the terms? -->
+					<label for="checkbox">
+						<input type="checkbox" id="subscribe" name="subscribe" value="subsctibe" checked> Add me to your email list
+					</label>
+				</fieldset>
+				<button type="submit"> Order the abduction </button>
+			</form>				
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<!-- inserts another website on your page -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.2580780165736!2d44.79701981473776!3d41.693364084934856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440ceef7739ff3%3A0xf2b7de8e3bce4189!2s5%20Sulkhan-Saba%20St%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1650395835619!5m2!1sen!2sge" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+			<iframe src="https://frontendmasters.com/bootcamp/" width="400" height="300" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+		</aside>
+	</div>
+	<!-- this should work but does not, since I am not registered on bootcamp -->
+	<!-- <script src="js/forms.js"></script> -->
+	</article>
+</body>
+</html>
+
+
+
+
+

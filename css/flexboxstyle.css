@@ -1,0 +1,21 @@
+/* flexbox only works for parents and children */
+
+article ul {
+    list-style-type: none;
+    padding: 0;
+    /* displays horizontally */
+    display: flex;
+    /* defines that flex shoult be row. since it is already horisontal, does not change here. "wrap" makes sure that in case the items do not fit in the window, they go to next row. "nowrap" resizes the content in boxes until there is no more space in them to fit the window */
+    flex-flow: row wrap;
+
+    /* moves the list items - flexstart (left), flexend (right), center (center) */
+    justify-content: center;
+}
+
+article li {
+    border: 3px solid black;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    /* makes all the boxes of specific size - persentage of the window width */
+    flex-basis: 10%;
+}

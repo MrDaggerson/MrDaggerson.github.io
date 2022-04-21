@@ -1,0 +1,32 @@
+.floatleft {
+    /* takes the item to the left side of the page */
+    float: left;
+    /* TRBL - to put marigin on specific sides */
+    margin: 0 1rem 1rem 0;
+}
+
+article h2 {
+    text-align: center;
+}
+
+article {
+    width: 50%;
+    text-align: justify;
+    border: 3px solid black;
+    padding: 0 1rem;
+    /* TB LR - to put marigin on two sides. "auto" calculates the centre automatically */
+    margin: 0 auto;
+}
+
+.floatright {
+    float: right;
+    margin: 1rem 0 1rem 1rem;
+}
+
+/* returns the floated item into the box */
+article:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
