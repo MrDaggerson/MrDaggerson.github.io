@@ -1,0 +1,52 @@
+/* must dos in al the css. Did not explain the reason, apperantly makes styling easier */
+* {
+    box-sizing: border-box;
+}
+
+.gallery-img {
+    display: none;
+    max-height: 200px;
+}
+
+.active {
+    display: block;
+}
+
+.image-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: #2A708C;
+    color: #CEDEF2;
+    font-size: 1rem;
+    padding: 5px 20px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    /* makes it clickable */
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.prev {
+    margin-right: 15px;
+}
+
+.btn:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+    color: #CEDEF2;
+}

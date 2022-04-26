@@ -34,15 +34,11 @@ html {
     font-weight: bold;
     font-size: 40px;
     height: 80px;
-    flex-basis: 24.5%;
+    flex-basis: 24.6%;
 }
 
 .double {
-    flex-basis: 49.7%;
-}
-
-.tripple {
-    flex-basis: 74.8%;
+    flex-basis: 49.75%;
 }
 
 .calc-button:hover {

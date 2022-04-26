@@ -11,7 +11,7 @@ function buttonClick(value) {
         // this is a number (is not NaN)
         handleNumber(value);
     }
-    screen.innerText = buffer;
+    screen.innerText = buffer; //.substring(0, 3);
 }
 
 function handleNumber(value) {
@@ -33,7 +33,7 @@ function handleSymbol(value) {
                 // you need two numbers to do math
                 return; 
             }
-            flushOperation(parseInt(buffer));
+            flushOperation(parseFloat(buffer));
             previousOperator = null;  
             buffer = runningTotal;
             runningTotal = 0;
@@ -46,11 +46,17 @@ function handleSymbol(value) {
             }
             break;
         case "+":
-        case "-":
+        case "−":
         case "×":
         case "÷":
             handleMath(value);
             break; 
+        case ".":
+            // ! in this case means "not" - --> if buffer does not include "." <--
+            if (!buffer.includes(".")) {
+                handleNumber(value);
+            }
+            break;
     } 
 }
 
@@ -60,7 +66,7 @@ function handleMath(value) {
         return;
     }
 
-    const intBuffer = parseInt(buffer);
+    const intBuffer = parseFloat(buffer);
 
     if (runningTotal === 0) {
         runningTotal = intBuffer;
@@ -76,7 +82,7 @@ function handleMath(value) {
 function flushOperation (intBuffer) {
     if (previousOperator === "+") {
         runningTotal = runningTotal + intBuffer;
-    } else if (previousOperator === "-") {
+    } else if (previousOperator === "−") {
         runningTotal = runningTotal - intBuffer;
     } else if (previousOperator === "×") {
         runningTotal = runningTotal * intBuffer;

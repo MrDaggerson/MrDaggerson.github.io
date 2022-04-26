@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vertical styles</title>
-    <link href="css/verticalstyles.css" rel="stylesheet">
+    <title>Gallery</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
 </head>
 <body>
-    
     <header class="header">
         <h1><a href="index.html"> &Hfr; </a></h1>
         
@@ -17,30 +16,31 @@
             <li><a href="newpage.html"> new </a> </li>
             <li><a href="csslearning.html"> css </a></li>
             <li><a href="newtags.html"> tags </a></li>
-            <li><a href="verticalnavigation.html" class="underline" > vertical </a></li>
+            <li><a href="verticalnavigation.html"> vertical </a></li>
             <li><a href="floats.html"> floats </a></li>
             <li><a href="flexbox.html"> flexbox </a></li>
             <li><a href="forms.html"> forms </a></li>
             <li><a href="blog.html"> blog </a></li>
             <li><a href="calculator.html"> calculator </a></li>
-            <li><a href="gallery.html"> gallery </a></li>
+            <li><a class="underline" href="gallery.html"> gallery </a></li>
             <li><a href="dogtask.html"> breeds </a></li>
         </ul>
-    
+
     </header>
     <article>
-    <!-- tag for navigation (nav) -->
-    <nav>
-        <ul class="innerlist">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+        <div class="image-gallery">
+            <img src="images/logo.png" class="gallery-img active" alt="alien" title="photo">
+            <img src="images/blog1.png" class="gallery-img" alt="alien" title="photo">
+            <img src="images/blog3.png" class="gallery-img" alt="alien" title="photo">
+            <img src="images/blog2.png" class="gallery-img" alt="alien" title="photo">
+            <img src="images/cute-octo.jpg" class="gallery-img" alt="alien" title="photo">
+        </div>
+        <div class="btns">
+            <button disabled class="btn prev"> prev </button>
+            <button class="btn next"> next </button>
+        </div>
     </article>
+    <script src="js/gallery.js"></script>
+    
 </body>
 </html>

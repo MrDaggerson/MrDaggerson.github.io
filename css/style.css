@@ -86,9 +86,19 @@ h1 {
     width: fit-content;
     display: flex;
     margin: 2rem;
+    margin-bottom: 0;
 }
 
 header {
     background: #2A708C;
     margin-bottom: 1rem;
+}
+
+header a:link {
+    color: #2A708C;
+    text-decoration: none;
+}
+
+.underline {
+    border-bottom: 2px solid #CEDEF2;
 }

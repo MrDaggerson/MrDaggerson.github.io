@@ -15,28 +15,34 @@
         <h1><a href="index.html"> &Hfr; </a></h1>
         
         <ul class="list1">
-            <li><a href="newpage.html"> new page </a> </li>
-            <li><a href="csslearning.html"> css learning </a></li>
-            <li><a href="newtags.html"> new tags </a></li>
-            <li><a href="verticalnavigation.html"> vertical navigation </a></li>
+            <li><a href="newpage.html"> new </a> </li>
+            <li><a href="csslearning.html"> css </a></li>
+            <li><a href="newtags.html"> tags </a></li>
+            <li><a href="verticalnavigation.html"> vertical </a></li>
             <li><a href="floats.html"> floats </a></li>
             <li><a href="flexbox.html"> flexbox </a></li>
             <li><a href="forms.html" class="underline"> forms </a></li>
-            <li><a href="blog.html"> alien blog </a></li>
+            <li><a href="blog.html"> blog </a></li>
             <li><a href="calculator.html"> calculator </a></li>
+			<li><a href="gallery.html"> gallery </a></li>
+			<li><a href="dogtask.html"> breeds </a></li>
         </ul>
 
-        <style>
-            .underline {
-                border-bottom: 2px solid #CEDEF2;
-            }
-        </style>
     </header>
 
 	<article>
 	<div class="wrapper">
 		<section>
-			<h2 class="realheader">Alien Abduction Order Form</h2>
+			<nav>
+				<h2 class="realheader">Alien Abduction Order Form</h2>
+			</nav>
+
+			<style>
+				.realheader {
+					cursor: grab;
+				}
+			</style>
+
 			<p class="description">Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
 			<!--- tag "action" makes the form work - after submit the server gets the submitted info. at this point we just get help from backend programmer and we do not actually build js code that does submitting  -->
 			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES
@@ -117,6 +123,35 @@
 	<!-- this should work but does not, since I am not registered on bootcamp -->
 	<!-- <script src="js/forms.js"></script> -->
 	</article>
+
+	<script src="https://unpkg.com/popmotion@8.5.0/dist/popmotion.global.min.js"></script>
+	
+	<script>
+		const { styler, spring, listen, pointer, value } = window.popmotion;
+
+		const ball = document.querySelector('.realheader');
+		const divStyler = styler(ball);
+		const ballXY = value({ x: 0, y: 0 }, divStyler.set);
+
+		listen(ball, 'mousedown touchstart')
+		.start((e) => {
+			e.preventDefault();
+			pointer(ballXY.get()).start(ballXY);
+		});
+
+		listen(document, 'mouseup touchend')
+		.start(() => {
+			spring({
+			from: ballXY.get(),
+			velocity: ballXY.getVelocity(),
+			to: { x: 0, y: 0 },
+			stiffness: 200,
+			mass: 3,
+			damping: 5,
+			}).start(ballXY);
+		});
+	</script>
+
 </body>
 </html>
 
